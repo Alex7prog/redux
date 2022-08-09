@@ -15,7 +15,6 @@ class ThemedButton extends React.Component {
     );
   }
 }
-
 ThemedButton.contextType = ThemeContext;
 
 export default ThemedButton;
