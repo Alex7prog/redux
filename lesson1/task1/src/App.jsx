@@ -14,6 +14,7 @@ const App = () => {
       <ThemeContext.Provider value={theme}>
         <ThemedButton onClick={toggleTheme}>Dynamic Theme</ThemedButton>
       </ThemeContext.Provider>
+
       <ThemedButton onClick={toggleTheme}>Default Theme</ThemedButton>
     </div>
   );
