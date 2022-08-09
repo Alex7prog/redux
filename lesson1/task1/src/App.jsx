@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import ThemedButton from './ThemedButton';
-import { themes, ThemeContext } from './themes-context';
+import { light, dark, ThemeContext } from './themes-context';
 
 // const App = () => {
 //   const [theme, setTheme] = useState(themes.light);
@@ -22,11 +22,11 @@ import { themes, ThemeContext } from './themes-context';
 
 class App extends React.Component {
   state = {
-    theme: themes.dark,
+    theme: light,
   };
 
   toggleTheme = () => {
-    const newTheme = this.state.theme === themes.light ? themes.dark : themes.light;
+    const newTheme = this.state.theme === light ? dark : light;
     this.setState({
       theme: newTheme,
     });
