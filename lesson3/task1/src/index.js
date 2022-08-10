@@ -12,6 +12,7 @@ store.subscribe(() => {
 store.dispatch(increment());
 store.dispatch(increment());
 store.dispatch(decrement());
+store.dispatch(reset());
 
 store.dispatch(addUser({ id: 1, name: 'Tom' }));
 store.dispatch(addUser({ id: 2, name: 'John' }));
