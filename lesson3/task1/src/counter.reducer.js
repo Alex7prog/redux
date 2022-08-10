@@ -1,4 +1,4 @@
-import { INCREMENT, DECREMENT, RESET } from './counter.action';
+import { INCREMENT, DECREMENT, RESET } from './counter.actions';
 
 export const counterReducer = (state = 0, action) => {
   switch (action.type) {

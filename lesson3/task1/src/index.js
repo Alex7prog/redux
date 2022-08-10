@@ -1,7 +1,7 @@
 // Combaining reducers
 import store from './store';
 
-import { increment, decrement, reset } from './counter.action';
+import { increment, decrement, reset } from './counter.actions';
 import { addUser, deleteUser, updateUser } from './users.actions';
 
 store.subscribe(() => {
