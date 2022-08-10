@@ -1,5 +1,5 @@
 // redux-dev-tools
-import store, { increment, decrement } from './counter';
+import { store, increment, decrement } from './counter';
 
 store.subscribe(() => {
   console.log('store: ', store.getState());
