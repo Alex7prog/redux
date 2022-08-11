@@ -6,6 +6,8 @@ const Pagination = ({ goPrev, goNext, currentPage, totalItems, itemsPerPage }) =
   let textPrevBtn = '←';
   let textNextBtn = '→';
 
+  currentPage = currentPage + 1;
+
   if (totalItems === 0 || currentPage === 1) {
     isPrevPageAvailable = false;
     textPrevBtn = null;
