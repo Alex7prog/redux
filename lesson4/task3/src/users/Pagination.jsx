@@ -6,12 +6,12 @@ const Pagination = ({ goPrev, goNext, currentPage, totalItems, itemsPerPage }) =
   let textPrevBtn = '←';
   let textNextBtn = '→';
 
-  if (currentPage === 1) {
+  if (currentPage === 0) {
     isPrevPageAvailable = false;
     textPrevBtn = null;
   }
 
-  if (currentPage === Math.ceil(totalItems / itemsPerPage)) {
+  if (currentPage === Math.ceil(totalItems / itemsPerPage) - 1) {
     isNextPageAvailable = false;
     textNextBtn = null;
   }
@@ -21,7 +21,7 @@ const Pagination = ({ goPrev, goNext, currentPage, totalItems, itemsPerPage }) =
       <button className="btn" onClick={goPrev} disabled={!isPrevPageAvailable}>
         {textPrevBtn}
       </button>
-      <span className="pagination__page">{currentPage}</span>
+      <span className="pagination__page">{currentPage + 1}</span>
       <button className="btn" onClick={goNext} disabled={!isNextPageAvailable}>
         {textNextBtn}
       </button>
