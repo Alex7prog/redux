@@ -2,18 +2,18 @@ import React from 'react';
 
 const Pagination = ({ goPrev, goNext, currentPage, totalItems, itemsPerPage }) => {
   let isPrevPageAvailable = true;
-  let isNextPageAvailable = true;
+  let isNextPageAvailable = false;
   let textPrevBtn = '←';
-  let textNextBtn = '→';
+  let textNextBtn = null;
 
   if (currentPage === 0) {
     isPrevPageAvailable = false;
     textPrevBtn = null;
   }
 
-  if (currentPage === Math.ceil(totalItems / itemsPerPage) - 1) {
-    isNextPageAvailable = false;
-    textNextBtn = null;
+  if (currentPage < Math.ceil(totalItems / itemsPerPage) - 1) {
+    isNextPageAvailable = true;
+    textNextBtn = '→';
   }
 
   return (

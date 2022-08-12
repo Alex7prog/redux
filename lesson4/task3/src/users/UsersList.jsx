@@ -23,9 +23,9 @@ const UsersList = ({ users, nextPage, prevPage }) => {
         itemsPerPage={usersPerPage}
       />
       <ul className="users">
-        {usersPageList.map(user => (
-          <User key={user.id} {...user} />
-        ))}
+        {usersPageList.map(user => {
+          return <User key={user.id} {...user} />;
+        })}
       </ul>
     </div>
   );
