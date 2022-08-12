@@ -1,4 +1,4 @@
-// User list with filtering
+// User list with filtering - React + Redux
 
 import React from 'react';
 import ReactDOM from 'react-dom';

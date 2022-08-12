@@ -1,11 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import * as usersActions from './users.actions';
-import {
-  usersListSelector,
-  filterTextSelector,
-  filteredUsersListSelector,
-} from './users.selectors';
+import { filterTextSelector, filteredUsersListSelector } from './users.selectors';
 
 import Filter from '../Filter';
 import User from './User';
@@ -23,19 +19,16 @@ const UsersList = ({ usersList, filterText, filterUsers }) => {
   );
 };
 
-// const mapState = state => {
-//   console.log('state: ', state);
-//   console.log('state: users', state.users);
+const mapState = state => {
+  return {
+    usersList: filteredUsersListSelector(state),
+    filterText: filterTextSelector(state),
+  };
+};
 
-//   return {
-//     usersList: filteredUsersListSelector(state),
-//     filterText: filterTextSelector(state),
-//   };
-// };
+const mapDispatch = {
+  filterUsers: usersActions.filterUsers,
+};
 
-// const mapDispatch = {
-//   filterUsers: usersActions.filterUsers,
-// };
-
-// export default connect(mapState, mapDispatch)(UsersList);
-export default UsersList;
+export default connect(mapState, mapDispatch)(UsersList);
+// export default UsersList;

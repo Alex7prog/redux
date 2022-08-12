@@ -7,7 +7,7 @@ import UsersList from './users/UsersList';
 const App = () => {
   return (
     <Provider store={store}>
-      <FilteredUsersList />
+      <UsersList />
     </Provider>
   );
 };
